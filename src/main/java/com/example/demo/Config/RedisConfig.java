@@ -37,7 +37,6 @@ public class RedisConfig {
             }
         };
     }
-
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory connectionFactory) {
         //初始化一个RedisCacheWriter
@@ -49,7 +48,4 @@ public class RedisConfig {
         RedisCacheManager cacheManager = new RedisCacheManager(redisCacheWriter, defaultCacheConfig);
         return cacheManager;
     }
-
-
-
 }
